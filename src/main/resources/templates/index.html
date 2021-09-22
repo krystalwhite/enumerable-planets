@@ -10,5 +10,22 @@
 <body>
 <h1>Pick a planet:</h1>
 
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Planet Name</th>
+            <th>Number of Moons</th>
+            <th>Number of Earth Days the Planet Takes to Rotate Around the Sun</th>
+        </tr>
+    </thead>
+
+    <tr th:each="planet : ${planets}">
+        <td th:text="${planet.name}"></td>
+        <td th:text="${planet.numMoons}"></td>
+        <td th:text="${planet.yearLength}"></td>
+    </tr>
+
+</table>
+
 </body>
 </html>
